@@ -10,4 +10,4 @@ class WhiskeyType(Enum):
     OTHER = "Other"
     
     def __str__(self):
-        return self.value
+        pass

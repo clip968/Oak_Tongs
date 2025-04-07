@@ -1,60 +1,56 @@
 import os
 import json
 import datetime
+import random
 
+# 클래스 임포트
 from user import User
-from user_preference import User_Preference
-from user_history import User_History
-from user_review import User_Review
+from user_preference import UserPreference
+from user_history import UserHistory
+from user_review import UserReview
 from whiskys import Whiskys
 from whiskey import Whiskey
 from taste_profile import TasteProfile
 from whiskey_type import WhiskeyType
-from recommendation_preference import Recommendation_Preference
-from recommendation_similar import Recommendation_Similar
-
-# 데이터 경로
-DATA_DIR = "data"
-USER_FILE = os.path.join(DATA_DIR, "user_data.json")
-WHISKEY_FILE = os.path.join(DATA_DIR, "whiskey_catalog.json")
-REVIEWS_FILE = os.path.join(DATA_DIR, "reviews.json")
+from recommendation import Recommendation
+from recommendation_preference import RecommendationPreference
+from recommendation_similar import RecommendationSimilar
 
 class System:
-    # 앱 총괄 관리 서비스
-    
     def __init__(self):
-        # 시스템 초기화
         self.current_user = None
         self.whiskey_catalog = Whiskys()
         self.all_reviews = {}
         self.recommendation_engine = None
-        self.ui_reference = None
+        
+        # 데이터 디렉토리 생성
+        data_dir = "data"
+        if not os.path.exists(data_dir):
+            os.makedirs(data_dir)
     
-    def initialize(self, ui_reference=None):
-        # 초기화
+    def initialize(self):
         pass
     
-    def manage_user(self, action, user_info=None):
-        # 사용자 관리 (등록, 수정, 삭제)
+    def register_new_user(self, user_info):
         pass
     
-    def manage_data(self, action):
-        # 데이터 관리 (불러오기, 저장)
+    def get_current_user(self):
         pass
     
-    def manage_whiskey(self, action, whiskey_id=None, review_data=None):
-        # 위스키 관리 (등록, 수정, 삭제)
+    def set_recommendation_engine(self, engine_type):
+        pass
+    
+    def get_whiskey_details_for_display(self, whiskey_id):
+        pass
+    
+    def create_and_add_review(self, whiskey_id, rating, text):
+        pass
+    
+    def get_reviews_for_whiskey(self, whiskey_id):
         pass
     
     def get_recommendations(self, count, method_type=None, base_whiskey_id=None):
-        # 추천 위스키 목록 반환
         pass
     
     def run(self):
-        # 실행
         pass
-    
-# 프로그램 실행 진입점
-if __name__ == '__main__':
-    system = System()
-    system.run()
