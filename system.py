@@ -11,7 +11,6 @@ from user_review import UserReview
 from whiskys import Whiskys
 from whiskey import Whiskey
 from taste_profile import TasteProfile
-from whiskey_type import WhiskeyType
 from recommendation import Recommendation
 from recommendation_preference import RecommendationPreference
 from recommendation_similar import RecommendationSimilar

@@ -1,6 +1,4 @@
 from taste_profile import TasteProfile
-from whiskey_type import WhiskeyType
-
 class Whiskey:
     def __init__(self, whiskey_id, name, taste_profile, origin, price, 
                  alcohol_percentage, whiskey_type, image_path=None, age_years=None):
