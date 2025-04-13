@@ -4,7 +4,7 @@ from recommendation import Recommendation
 class RecommendationSimilar(Recommendation):
     def __init__(self, user_reference, whiskeys_reference):
         super().__init__(user_reference, whiskeys_reference)
-        self.similarity_threshold = 0.5  # 유사도 임계값
+        self.similarity_threshold = 0.5  
     
     def get_recommendations(self, count, base_whiskey_id=None):
         pass
